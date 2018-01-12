@@ -20,18 +20,16 @@ if __name__ == '__main__':
         except:
             pass
 
-    step_per_epoch = 10 // FLAGS.batch_size
     for i in range(30):
-        steps = int(step_per_epoch * (i + 1))
-        # train 1 epoch
+       # train 1 epoch
         print('################    train    ################')
         p = os.popen('python ./train.py' + cmd)
         for l in p:
-            print(p.strip())
+            print(l.strip())
 
         # eval
         print('################    eval    ################')
         p = os.popen('python ./sample.py' + cmd)
-
         for l in p:
-            print(p.strip())
+            print(l.strip())
+
