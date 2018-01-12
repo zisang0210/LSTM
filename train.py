@@ -50,7 +50,7 @@ with tf.Session() as sess:
     except Exception:
         logging.debug('no check point found....')
 
-    for x in range(10):
+    for x in range(1):
         logging.debug('epoch [{0}]....'.format(x))
         state = sess.run(model.state_tensor)
         for dl in utils.get_train_data(vocabulary, batch_size=FLAGS.batch_size, num_steps=FLAGS.num_steps):
