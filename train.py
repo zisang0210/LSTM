@@ -35,7 +35,7 @@ model.build()
 
 
 with tf.Session() as sess:
-    summary_string_writer = tf.summary.FileWriter(FLAGS.log_dir, sess.graph)
+    summary_string_writer = tf.summary.FileWriter(FLAGS.output_dir, sess.graph)
 
     saver = tf.train.Saver(max_to_keep=5)
     sess.run(tf.global_variables_initializer())
@@ -43,7 +43,7 @@ with tf.Session() as sess:
     logging.debug('Initialized')
 
     try:
-        checkpoint_path = tf.train.latest_checkpoint(FLAGS.log_dir)
+        checkpoint_path = tf.train.latest_checkpoint(FLAGS.output_dir)
         saver.restore(sess, checkpoint_path)
         logging.debug('restore from [{0}]'.format(checkpoint_path))
 
@@ -66,5 +66,5 @@ with tf.Session() as sess:
             if gs % 10 == 0:
                 logging.debug('step [{0}] loss [{1}]'.format(gs, l))
                 save_path = saver.save(sess, os.path.join(
-                    FLAGS.log_dir, "model.ckpt"), global_step=gs)
+                    FLAGS.output_dir, "model.ckpt"), global_step=gs)
     summary_string_writer.close()

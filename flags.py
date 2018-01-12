@@ -12,7 +12,7 @@ current_time = datetime.datetime.now(tz)
 
 def parse_args(check=True):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--log_dir', type=str, default='./rnn_log',
+    parser.add_argument('--output_dir', type=str, default='./rnn_log',
                         help='path to save log and checkpoint.')
 
     parser.add_argument('--text', type=str, default='QuanSongCi.txt',

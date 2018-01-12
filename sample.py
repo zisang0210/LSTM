@@ -34,7 +34,7 @@ model = Model(learning_rate=FLAGS.learning_rate, batch_size=1, num_steps=1)
 model.build()
 
 with tf.Session() as sess:
-    summary_string_writer = tf.summary.FileWriter(FLAGS.log_dir, sess.graph)
+    summary_string_writer = tf.summary.FileWriter(FLAGS.output_dir, sess.graph)
 
     saver = tf.train.Saver(max_to_keep=5)
     sess.run(tf.global_variables_initializer())
@@ -42,7 +42,7 @@ with tf.Session() as sess:
     logging.debug('Initialized')
 
     try:
-        checkpoint_path = tf.train.latest_checkpoint(FLAGS.log_dir)
+        checkpoint_path = tf.train.latest_checkpoint(FLAGS.output_dir)
         saver.restore(sess, checkpoint_path)
         logging.debug('restore from [{0}]'.format(checkpoint_path))
 
