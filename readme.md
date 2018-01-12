@@ -6,6 +6,8 @@ http://edu.csdn.net/lecturer/1427
 
 TinyMind上Tensorflow已经有1.4的版本，能比1.3的版本快一点，推荐使用。
 
+**本作业用4CPU的速度也可以接受。考虑成本问题，本作业可以用TinyMind上的CPU资源来运行**
+
 ## 作业内容
 
 使用tensorflow中的rnn相关操作，以作业提供的《全宋词》为训练数据，训练一个人工智能写词机。
