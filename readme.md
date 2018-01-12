@@ -85,6 +85,7 @@ https://www.github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutor
 - 这里模型的规模比较小，所以输出的内容可能不是特别有意义，而且训练过程中，不同的checkpoint，其输出也有一些区别。
 - 数据处理中，data为文本中一段随机截取的文字，label为data对应的下一个标号的文字。以苏轼的江神子（江城子）为例：输入为 “老夫聊发少年”，则对应的label为"夫聊发少年狂"。
 - 训练过程至少要到第二个epoch才能看到一些比较有意义的输出，第一个epoch的输出可能是大量的标点，换行等等。而且这种情况后面还会有。
+- 这里的代码，train_eval.py用于在tinymind上运行训练和采样，按照代码中默认的设置，运行一个epoch需要19220步，在tinymind上需要半小时左右。
 
 ## 参考资料
 
