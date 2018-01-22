@@ -27,6 +27,8 @@ https://www.github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutor
 
 图片中意义接近的词，如数字等，距离比较近（一这个数字是个特例，离其他数字比较远）。
 
+提供一个文档，说明自己对embedding的理解，以及对上述图片的结果分析和认识。
+
 #### 要点提示
 
 - 全宋词资料不同于英文，不使用分词，这里直接将每个单字符作为一个word。
@@ -74,6 +76,8 @@ https://www.github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutor
 
 可以明确看到，RNN学会了标点的使用，记住了一些词牌的名字。
 
+提供一个文档，描述自己对rnn的理解和训练rnn的过程中的心得体会。对自己输出的结果的理解以及输出的解释。
+
 #### 要点提示
 
 - 构建RNN网络需要的API如下，请自行查找tensorflow相关文档。
@@ -88,6 +92,7 @@ https://www.github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutor
 - 数据处理中，data为文本中一段随机截取的文字，label为data对应的下一个标号的文字。以苏轼的江神子（江城子）为例：输入为 “老夫聊发少年”，则对应的label为"夫聊发少年狂"。
 - 训练过程至少要到第二个epoch才能看到一些比较有意义的输出，第一个epoch的输出可能是大量的标点，换行等等。而且这种情况后面还会有。
 - 这里的代码，train_eval.py用于在tinymind上运行训练和采样，按照代码中默认的设置，运行一个epoch需要19220步，在tinymind上需要半小时左右。
+ 
 
 ## 参考资料
 
