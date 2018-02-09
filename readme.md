@@ -37,7 +37,7 @@ https://www.github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutor
 - matplotlib中输出中文的时候会出现乱码，请自行搜索如何设置matplotlib使之可以输出中文。
 - 按照tensorflow官方代码中给出的设置，运行40W个step可以输出一个比较好的结果，四核CPU上两三个小时左右。
 - 对于文本的处理，可以搜到很多不同的处理方式，大部分文本处理都要删掉所有的空格，换行，标点符号等等。这里的训练可以不对文本做任何处理。
-
+- 本作业中，涉及大量中文的处理，因为python2本身对UTF-8支持不好，另外官方对python2的支持已经快要结束了，推荐本项目使用python3进行。
 
 
 ### rnn训练部分
